@@ -1,60 +1,55 @@
-# 🧰 Excel Previewer CLI Tool (Python)
+# Excel Previewer CLI
 
-A simple Python-based command-line tool to preview Excel files directly in the terminal. Great for analyzing Excel sheets quickly without opening Excel, and perfect for automating Excel inspection workflows.
+A lightweight **Python command-line tool** for quickly previewing Excel workbooks from the terminal.
 
----
+Instead of opening a spreadsheet application just to inspect a workbook, the tool lets you preview rows, inspect sheets, and control how much data is displayed.
 
-## 🚀 Features
+## Features
 
-- Preview the first few rows of any `.xlsx` Excel file
-- Optionally show all sheets in a workbook
-- Supports custom number of preview rows
-- Clean, readable output for terminal use
-- Great for automation and data wrangling tasks
+- Preview the first rows of an `.xlsx` workbook
+- Inspect all sheets in a workbook
+- Choose the number of preview rows
+- Clean terminal output
+- Useful for quick data inspection and automation workflows
 
----
+## Tech Stack
 
-## 📁 Files Included
+- **Python**
+- **pandas**
+- **openpyxl**
 
-| File Name             | Description |
-|-----------------------|-------------|
-| `excel_parser.py`     | 🧠 Main CLI tool – preview Excel content via terminal |
-| `generate_dummy_data.py` | 🏭 Generates `dummy_data.xlsx` and `dummy_data.csv` (realistic random data) |
-| `generate_sample_data.py` | ✨ Generates `panda1.xlsx` and `sample.xlsx` (simple, clean data) |
-| `dummy_data.xlsx`     | 📊 Excel file with realistic fake employee data (Name, Email, Salary, etc.) |
-| `dummy_data.csv`      | CSV version of the same data |
-| `sample.xlsx`         | 🌈 Simple dataset with 4 rows — Name, Age, City |
-| `panda1.xlsx`         | 🐼 Another fake business-style file for testing single-sheet mode |
+## Usage
 
----
+Preview the first sheet:
 
-## 💻 How to Use
-python excel_parser.py panda1.xlsx --all
-python excel_parser.py sample.xlsx --rows 10
-
----
-### ▶️ Basic Preview (first sheet only):
-python excel_parser.py sample.xlsx
-========================================
-First Sheet Data (4 rows, 3 columns)
-========================================
-     Name  Age      City
-0   Alice   25  New York
-1     Bob   30    London
-2 Charlie   35     Paris
-3   Diana   40     Tokyo
 ```bash
-python excel_parser.py dummy_data.xlsx
-## 🛠 Requirements
+python excel_parser.py sample.xlsx
+```
 
-Make sure you have the following installed:
+Preview a specific number of rows:
 
-- Python 3.7 or higher
-- `pandas` (for data handling)
-- `openpyxl` (for working with Excel `.xlsx` files)
+```bash
+python excel_parser.py sample.xlsx --rows 10
+```
 
-### 📦 Install the dependencies:
+Show all sheets:
+
+```bash
+python excel_parser.py panda1.xlsx --all
+```
+
+## Installation
+
+Install the dependencies with:
 
 ```bash
 pip install pandas openpyxl
+```
 
+## Why I Built It
+
+This project was a practical exercise in Python scripting, command-line interfaces, file handling, and working with structured spreadsheet data.
+
+## Repository
+
+https://github.com/Kylin-Ace/excel-previewer-cli
