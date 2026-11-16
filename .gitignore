@@ -20,3 +20,5 @@ Thumbs.db
 # Excel/temporary backup files
 *.bak
 *.tmp
+
+.venv/

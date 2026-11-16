@@ -4,6 +4,8 @@ Inspect an Excel workbook from the terminal. See its dimensions and preview rows
 
 ## Try it
 
+Use Python 3.12. The requirements file also includes Faker for the sample-data generators.
+
 ```bash
 git clone https://github.com/Kylin-Ace/excel-previewer-cli.git
 cd excel-previewer-cli
@@ -13,7 +15,7 @@ python -m venv .venv
 Activate with `source .venv/bin/activate` on macOS or Linux, or `.venv\Scripts\Activate.ps1` in Windows PowerShell. Then run:
 
 ```bash
-python -m pip install pandas openpyxl
+python -m pip install -r requirements.txt
 python excel_parser.py sample.xlsx --rows 3
 ```
 
